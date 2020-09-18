@@ -25,10 +25,6 @@ h1 {
   border-bottom: 10px solid black;
 }
 
-.description{
-  white-space: pre-wrap;
-}
-
 .row {
   white-space: pre-wrap;
   height: 80px;
@@ -43,27 +39,6 @@ h1 {
   align-self: center;
  height: 2rem;
  width: 2rem;
-}
-
-.hour {
-  background-color: #ffffff;
-  color: #000000;
-  border-top: 1px dashed #000000;
-}
-
-.past {
-  background-color: #d3d3d3;
-  color: white;
-}
-
-.present {
-  background-color: #ff6961;
-  color: white;
-}
-
-.future {
-  background-color: #77dd77;
-  color: white;
 }
 
 .saveBtn {

@@ -1,92 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <!-- <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    /> -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/lux/bootstrap.min.css" integrity="sha384-9+PGKSqjRdkeAU7Eu4nkJU8RFaH8ace8HGXnkiKMP9I9Te0GJ4/km3L1Z8tXigpG" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/style/style.css"/>
-    <title>Work Day Scheduler</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/lux/bootstrap.min.css" integrity="sha384-9+PGKSqjRdkeAU7Eu4nkJU8RFaH8ace8HGXnkiKMP9I9Te0GJ4/km3L1Z8tXigpG" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/style/style.css"/>
+  <title>Work Day Scheduler</title>
+</head>
 
-  <body>
+<body>
 
-    <header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">Today's date is <span id="todayDate"></span></p>
-      <p id="currentDay" class="lead"></p>
-    </header>
-    <div class="container">
+  <header class="jumbotron">
+    <h1 class="display-3">Work Day Scheduler</h1>
+    <p class="lead">Today's date is <span id="todayDate"></span></p>
+    <p id="currentDay" class="lead"></p>
+  </header>
+  
+  <div class="container">
 
-      <!-- Timeblocks go here -->
-      <div class="input-group row" >
-          <span class="input-group-text timeValue" id="appt9">09:00</span>
-          <textarea class="form-control appointment" type = "text" aria-label="With textarea"></textarea>
-          <button class="input-group-text saveIcon"><img class = "icon" src="./assets/images/save-solid.svg" alt="Save Button"></button>
-      </div>
-
-      <div class="input-group row" >
-          <span class="input-group-text timeValue" id="appt10">10:00</span>
-          <textarea class="form-control appointment" type = "text" aria-label="With textarea"></textarea>
-          <button class="input-group-text saveIcon"><img class = "icon" src="./assets/images/save-solid.svg" alt="Save Button"></button>
-      </div>
-
-      <div class="input-group row" >
-        <span class="input-group-text timeValue" id="appt11">11:00</span>
+    <!-- Timeblocks go here -->
+    <div class="input-group row" >
+        <span class="input-group-text timeValue" id="appt9">09:00</span>
         <textarea class="form-control appointment" type = "text" aria-label="With textarea"></textarea>
         <button class="input-group-text saveIcon"><img class = "icon" src="./assets/images/save-solid.svg" alt="Save Button"></button>
-      </div>
-
-      <div class="input-group row" >
-        <span class="input-group-text timeValue" id="appt12">12:00</span>
-        <textarea class="form-control appointment" type = "text" aria-label="With textarea"></textarea>
-        <button class="input-group-text saveIcon"><img class = "icon" src="./assets/images/save-solid.svg" alt="Save Button"></button>
-      </div>
-
-      <div class="input-group row" >
-        <span class="input-group-text timeValue" id="appt13">13:00</span>
-        <textarea class="form-control appointment" type = "text" aria-label="With textarea"></textarea>
-        <button class="input-group-text saveIcon"><img class = "icon" src="./assets/images/save-solid.svg" alt="Save Button"></button>
-      </div>
-
-      <div class="input-group row" >
-        <span class="input-group-text timeValue" id="appt14">14:00</span>
-        <textarea class="form-control appointment" type = "text" aria-label="With textarea"></textarea>
-        <button class="input-group-text saveIcon"><img class = "icon" src="./assets/images/save-solid.svg" alt="Save Button"></button>
-      </div>
-
-      <div class="input-group row" >
-        <span class="input-group-text timeValue" id="appt15">15:00</span>
-        <textarea class="form-control appointment" type = "text" aria-label="With textarea"></textarea>
-        <button class="input-group-text saveIcon"><img class = "icon" src="./assets/images/save-solid.svg" alt="Save Button"></button>
-      </div>
-
-      <div class="input-group row" >
-        <span class="input-group-text timeValue" id="appt16">16:00</span>
-        <textarea class="form-control appointment" type = "text" aria-label="With textarea"></textarea>
-        <button class="input-group-text saveIcon"><img class = "icon" src="./assets/images/save-solid.svg" alt="Save Button"></button>
-      </div>
-
-      <div class="input-group row" >
-        <span class="input-group-text timeValue" id="appt17">17:00</span>
-        <textarea class="form-control appointment" type = "text" aria-label="With textarea"></textarea>
-        <button class="input-group-text saveIcon"><img class = "icon" src="./assets/images/save-solid.svg" alt="Save Button"></button>
-      </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <!-- <script src="https://kit.fontawesome.com/7bddc021c8.js" crossorigin="anonymous"></script> -->
-    <script src="./assets/script/script.js"></script>  
-  </body>
+    <div class="input-group row" >
+        <span class="input-group-text timeValue" id="appt10">10:00</span>
+        <textarea class="form-control appointment" type = "text" aria-label="With textarea"></textarea>
+        <button class="input-group-text saveIcon"><img class = "icon" src="./assets/images/save-solid.svg" alt="Save Button"></button>
+    </div>
+
+    <div class="input-group row" >
+      <span class="input-group-text timeValue" id="appt11">11:00</span>
+      <textarea class="form-control appointment" type = "text" aria-label="With textarea"></textarea>
+      <button class="input-group-text saveIcon"><img class = "icon" src="./assets/images/save-solid.svg" alt="Save Button"></button>
+    </div>
+
+    <div class="input-group row" >
+      <span class="input-group-text timeValue" id="appt12">12:00</span>
+      <textarea class="form-control appointment" type = "text" aria-label="With textarea"></textarea>
+      <button class="input-group-text saveIcon"><img class = "icon" src="./assets/images/save-solid.svg" alt="Save Button"></button>
+    </div>
+
+    <div class="input-group row" >
+      <span class="input-group-text timeValue" id="appt13">13:00</span>
+      <textarea class="form-control appointment" type = "text" aria-label="With textarea"></textarea>
+      <button class="input-group-text saveIcon"><img class = "icon" src="./assets/images/save-solid.svg" alt="Save Button"></button>
+    </div>
+
+    <div class="input-group row" >
+      <span class="input-group-text timeValue" id="appt14">14:00</span>
+      <textarea class="form-control appointment" type = "text" aria-label="With textarea"></textarea>
+      <button class="input-group-text saveIcon"><img class = "icon" src="./assets/images/save-solid.svg" alt="Save Button"></button>
+    </div>
+
+    <div class="input-group row" >
+      <span class="input-group-text timeValue" id="appt15">15:00</span>
+      <textarea class="form-control appointment" type = "text" aria-label="With textarea"></textarea>
+      <button class="input-group-text saveIcon"><img class = "icon" src="./assets/images/save-solid.svg" alt="Save Button"></button>
+    </div>
+
+    <div class="input-group row" >
+      <span class="input-group-text timeValue" id="appt16">16:00</span>
+      <textarea class="form-control appointment" type = "text" aria-label="With textarea"></textarea>
+      <button class="input-group-text saveIcon"><img class = "icon" src="./assets/images/save-solid.svg" alt="Save Button"></button>
+    </div>
+
+    <div class="input-group row" >
+      <span class="input-group-text timeValue" id="appt17">17:00</span>
+      <textarea class="form-control appointment" type = "text" aria-label="With textarea"></textarea>
+      <button class="input-group-text saveIcon"><img class = "icon" src="./assets/images/save-solid.svg" alt="Save Button"></button>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="./assets/script/script.js"></script> 
+  
+</body>
 </html>

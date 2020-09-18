@@ -1,9 +1,21 @@
+//This variable links the current date script to the DOM
 const todayDateEl = document.querySelector("#todayDate");
-const input9 = document.querySelector("#input9");
 
+// This variable grabs the current hour using moment.js
 var currentHour = moment().hour();
 
+//This variable grabs the current date using moment.js
 const m = moment().format("dddd, MMMM Do YYYY");
+//This array collects the appointment lobels so they can be indexed when pulling from localstorage
+const appointments = ["appt9", "appt10", "appt11", "appt12", "appt13", "appt14", "appt15", "appt16", "appt17"]
+
+//This function indexes the appointment elements in the html and assigns local storage values
+//that correspond with the appropriate keys in the appointments array
+$(document).ready(function(){
+    for (var j = 9; j < 18; j++){
+        $(".appointment").eq(j-9).val(localStorage.getItem(appointments[j-9]));
+    }
+});
 
 //prints today's date to the header
 todayDateEl.innerHTML = m;
@@ -21,27 +33,11 @@ for (var i = 9; i < 18; i++) {
     }
 }
 
-
-// $(".saveIcon").eq(0).click(function(){
-//     var value = input9.value;
-
-//     if (value != "") {
-//         localStorage.setItem("input9", value);
-//     }
-// });
-
+//Save Icon listener waits for a click on a save icon then searches that element's sibling elements
+//to determine which hour the appointment is saved to and what the content of the appointment's details are
 $(".saveIcon").click(function(){
-
-    console.log(this);
-
-
     var appointment = $(this).siblings(".appointment").val();
     var timeSlot = $(this).siblings(".timeValue").attr("id");
 
-    // if (apptInput != "") {
-        localStorage.setItem(timeSlot, appointment);
-    // }
+    localStorage.setItem(timeSlot, appointment);
 });
-
-
-console.log(localStorage);
