@@ -1,7 +1,7 @@
 const todayDateEl = document.querySelector("#todayDate");
+const input9 = document.querySelector("#input9");
 
 var currentHour = moment().hour();
-var timeArray = ["9","10","11","12","13","14","15","16","17"];
 
 const m = moment().format("dddd, MMMM Do YYYY");
 
@@ -21,3 +21,27 @@ for (var i = 9; i < 18; i++) {
     }
 }
 
+
+// $(".saveIcon").eq(0).click(function(){
+//     var value = input9.value;
+
+//     if (value != "") {
+//         localStorage.setItem("input9", value);
+//     }
+// });
+
+$(".saveIcon").click(function(){
+
+    console.log(this);
+
+
+    var appointment = $(this).siblings(".appointment").val();
+    var timeSlot = $(this).siblings(".timeValue").attr("id");
+
+    // if (apptInput != "") {
+        localStorage.setItem(timeSlot, appointment);
+    // }
+});
+
+
+console.log(localStorage);
