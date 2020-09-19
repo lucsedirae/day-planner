@@ -11,11 +11,15 @@ const appointments = ["appt9", "appt10", "appt11", "appt12", "appt13", "appt14",
 
 //This function indexes the appointment elements in the html and assigns local storage values
 //that correspond with the appropriate keys in the appointments array
+init();
+
+function init() {
 $(document).ready(function(){
     for (var j = 9; j < 18; j++){
         $(".appointment").eq(j-9).val(localStorage.getItem(appointments[j-9]));
     }
 });
+}
 
 //prints today's date to the header
 todayDateEl.innerHTML = m;
@@ -40,4 +44,16 @@ $(".saveIcon").click(function(){
     var timeSlot = $(this).siblings(".timeValue").attr("id");
 
     localStorage.setItem(timeSlot, appointment);
+});
+
+//This listener's function listens for a click on the recycle button and checks whether an appointment 
+//box has any content loaded. If so, it removes that content and refreshes the page. 
+$(".recycleIcon").click(function(){
+    var appointment = $(this).siblings(".appointment").val();
+    var timeSlot = $(this).siblings(".timeValue").attr("id");
+
+    if (appointment !== ""){
+        localStorage.removeItem(timeSlot);
+        init();
+    };
 });
