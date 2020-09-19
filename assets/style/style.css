@@ -28,7 +28,8 @@ textarea{
 
 .timeValue {
   height: 5rem;
-  color: wheat;
+  color: black;
+  font-weight: 600;
 }
 
 .icon {

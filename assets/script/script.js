@@ -1,9 +1,7 @@
 //This variable links the current date script to the DOM
 const todayDateEl = document.querySelector("#todayDate");
-
 // This variable grabs the current hour using moment.js
 var currentHour = moment().hour();
-
 //This variable grabs the current date using moment.js
 const m = moment().format("dddd, MMMM Do YYYY");
 //This array collects the appointment lobels so they can be indexed when pulling from localstorage
@@ -12,7 +10,6 @@ const appointments = ["appt9", "appt10", "appt11", "appt12", "appt13", "appt14",
 //This function indexes the appointment elements in the html and assigns local storage values
 //that correspond with the appropriate keys in the appointments array
 init();
-
 function init() {
 $(document).ready(function(){
     for (var j = 9; j < 18; j++){
@@ -22,7 +19,7 @@ $(document).ready(function(){
 }
 
 //prints today's date to the header
-todayDateEl.innerHTML = m;
+todayDateEl.innerHTML = (m + "<br>");
 
 //changes the color of the time block based on what time of day it is currently
 for (var i = 9; i < 18; i++) {
@@ -57,3 +54,8 @@ $(".recycleIcon").click(function(){
         init();
     };
 });
+
+
+function checkWeather() {
+
+}
