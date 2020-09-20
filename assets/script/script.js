@@ -59,7 +59,7 @@ $(".recycleIcon").click(function(){
 
 function checkWeather() {
     // 22ce314bdb5cf097792a93d02ec2e354 Open Weather API key
-    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=Richmond&appid=22ce314bdb5cf097792a93d02ec2e354"
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=Richmond&appid=22ce314bdb5cf097792a93d02ec2e354"
     $.ajax({
         url: queryURL,
         method: "GET"
