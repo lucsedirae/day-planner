@@ -8,14 +8,16 @@ const m = moment().format("dddd, MMMM Do YYYY");
 const appointments = ["appt9", "appt10", "appt11", "appt12", "appt13", "appt14", "appt15", "appt16", "appt17"]
 
 //This function indexes the appointment elements in the html and assigns local storage values
-//that correspond with the appropriate keys in the appointments array
+//that correspond with the appropriate keys in the appointments array. It then calls the function that
+//checks the weather and then prints that information to the DOM
 init();
 function init() {
-$(document).ready(function(){
-    for (var j = 9; j < 18; j++){
-        $(".appointment").eq(j-9).val(localStorage.getItem(appointments[j-9]));
-    }
-});
+    $(document).ready(function(){
+        for (var j = 9; j < 18; j++){
+            $(".appointment").eq(j-9).val(localStorage.getItem(appointments[j-9]));
+        }
+    });
+    checkWeather();
 }
 
 //prints today's date to the header
@@ -55,7 +57,17 @@ $(".recycleIcon").click(function(){
     };
 });
 
-
 function checkWeather() {
-
-}
+    // 22ce314bdb5cf097792a93d02ec2e354 Open Weather API key
+    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=Richmond&appid=22ce314bdb5cf097792a93d02ec2e354"
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function(response) {
+            var temperature = Math.floor((response.main.temp)-273.15) * 9/5 + 32;
+            var skyState = response.weather[0].description;
+            $("#currentWeather").text("It is currently " + temperature + " degrees and " + skyState);
+            console.log(response);
+            console.log(temperature);
+        }
+)};
