@@ -9,5 +9,6 @@ returns later or refreshes the page the data is persistent and will only be remo
 the user clicks the recycle button or manually. empties their local storage cache.<br>
 Additionally, the planner features a day of the week notification under the header<br>
 as well as a local weather brief.<br>
-![Application Screenshot](./assets/images/application-overview.jpg)<br>
-![Application Screenshot With Text](./assets/images/application-input.jpg)<br>
+
+![Application Screenshot](./assets/images/application-overview.jpg)
+![Application Screenshot With Text](./assets/images/application-input.jpg)
