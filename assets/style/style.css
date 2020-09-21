@@ -2,11 +2,17 @@ body {
     font-family: 'Lexend Exa', sans-serif;
     font-size: 16px;
     line-height: 1;
+    background-color: skyblue;
   }
+
+  footer {
+  text-align: center;
+  background-color: whitesmoke;
+}
   
 textarea{
   background: transparent;
-  border: none;
+  /* border: none; */
   resize: none;
   color: #000000;
   border-left: 1px solid black;
@@ -14,18 +20,23 @@ textarea{
   font-weight: 600;
 }
 
-footer {
-  text-align: center;
-  width: 100%;
-  margin: 0;
-}
-
 .appointment:placeholder-shown {
   font-style: italic;
 }
 
-footer {
-  text-align: center;
+.container {
+  margin-bottom: 2.5rem;
+}
+
+.icon {
+  align-self: center;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.input-group {
+  background-color: whitesmoke;
+  border-radius: 1rem;
 }
 
 .jumbotron {
@@ -33,6 +44,16 @@ footer {
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
+  background-color: whitesmoke;
+  padding: 0;
+}
+
+.list-group-item {
+  height: 5rem;
+}
+
+.recycleIcon {
+  width: 4rem;
 }
 
 .row {
@@ -41,28 +62,13 @@ footer {
   border-top: 1px solid white;;
 }
 
+.saveIcon {
+  width: 4rem;
+}
+
 .timeValue {
   height: 5rem;
   color: black;
   font-weight: 600;
-}
-
-.icon {
-  align-self: center;
-  height: 2rem;
-  width: 2rem;
-}
-
-
-.icon i:hover {
-  font-size: 20px;
-  transition: all .3s ease-in-out;
-}
-
-.list-group-item {
-    height: 5rem;
-}
-
-.container {
-  margin-bottom: 3rem;
+  width: 5rem;
 }

@@ -8,4 +8,6 @@ store it locally on the user's machine. Now, even if the user closes their brows
 returns later or refreshes the page the data is persistent and will only be removed when<br>
 the user clicks the recycle button or manually. empties their local storage cache.<br>
 Additionally, the planner features a day of the week notification under the header<br>
-as well as a local weather brief.
+as well as a local weather brief.<br>
+![Application Screenshot](./assets/images/application-overview.jpg)<br>
+![Application Screenshot With Text](./assets/images/application-input.jpg)<br>
