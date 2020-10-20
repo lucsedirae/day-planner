@@ -1,4 +1,7 @@
 # Work Day Planner
+
+![GitHub](https://img.shields.io/github/license/LucSedirae/day-planner?style=flat-square)
+
 <br>
 https://lucsedirae.github.io/day-planner/<br>
 A simple day planner for organizing appointments and taking notes<br>
